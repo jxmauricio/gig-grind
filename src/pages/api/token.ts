@@ -11,7 +11,7 @@ export default async function handler(
   try {
     const response = await fetch("https://api.openai.com/v1/realtime/sessions", {
       method: "POST",
-      headers: {
+      headers: {   
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },

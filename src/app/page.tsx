@@ -96,11 +96,16 @@ export default function Home() {
     peerConnection.current = null;
     console.log("Session Stopped")
   }
+  async function addPinnedQuestion() {
+   var res =  await fetch("/api/pin-question")
+   console.log(res)
+  }
   return (
     <div>
       <button onClick={startSession}>Start Session</button>
       <p>{aiResponse}</p>
       <button onClick={stopSession}>Stop Session</button>
+      <button onClick={addPinnedQuestion}>Add Pinned Question</button>
     </div>
   );
 }
